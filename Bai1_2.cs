@@ -40,7 +40,7 @@ namespace THUCHANH02
             Console.WriteLine("Diem A : ");
             Bai1_2 A = new Bai1_2(); A.Input();
 
-            Console.WriteLine("\nDiem B : ");
+            Console.WriteLine("Diem B : ");
             Bai1_2 B = new Bai1_2(); B.Input();
 
             Console.WriteLine($"\nKhoang cach : {A.KhoangCach(B)}");
