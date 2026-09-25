@@ -4,7 +4,7 @@ namespace THUCHANH02
 {
     public class Bai1_1
     {
-        // Thuộc tính lưu trữ họ tên và năm sinh[cite: 18]
+        
         public string HoTen { get; set; }
         public int NamSinh { get; set; }
 
@@ -16,7 +16,7 @@ namespace THUCHANH02
             NamSinh = int.Parse(Console.ReadLine());
         }
 
-        // Phương thức tính tuổi dựa trên năm hiện hành[cite: 18]
+        
         public int TinhTuoi()
         {
             return DateTime.Now.Year - NamSinh;
