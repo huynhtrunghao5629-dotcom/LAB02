@@ -34,14 +34,15 @@ namespace THUCHANH02
             {
                 Console.WriteLine($"--- Nhap thong tin nguoi thu {i + 1} ---");
                 Bai1_3 nguoi = new Bai1_3();
-                nguoi.Input(); 
+                // Đã sửa lại thành hàm Nhap()
+                nguoi.Nhap();
                 Them(nguoi);
             }
         }
 
         public void Xuat()
         {
-            foreach (var nguoi in danhSachNguoi) nguoi.Output();
+            foreach (var nguoi in danhSachNguoi) nguoi.Xuat();
         }
 
         public Bai2_2 LayDanhSachConSong()
@@ -49,7 +50,8 @@ namespace THUCHANH02
             Bai2_2 ketQua = new Bai2_2();
             foreach (var nguoi in danhSachNguoi)
             {
-                if (nguoi.IsLiving()) ketQua.Them(nguoi);
+          
+                if (nguoi.ConSong()) ketQua.Them(nguoi);
             }
             return ketQua;
         }
