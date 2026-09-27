@@ -4,7 +4,6 @@ namespace THUCHANH02
 {
     public class Bai1_1
     {
-        
         public string HoTen { get; set; }
         public int NamSinh { get; set; }
 
@@ -16,7 +15,6 @@ namespace THUCHANH02
             NamSinh = int.Parse(Console.ReadLine());
         }
 
-        
         public int TinhTuoi()
         {
             return DateTime.Now.Year - NamSinh;
@@ -27,12 +25,11 @@ namespace THUCHANH02
             Console.WriteLine($"Sinh vien {HoTen}, sinh nam {NamSinh}, hien tai {TinhTuoi()} tuoi.");
         }
 
-        
         public static void Main(string[] args)
         {
-            Bai1_1 sv = new Bai1_1();
-            sv.Nhap();
-            sv.Xuat();
+            Bai1_1 sinhVien = new Bai1_1();
+            sinhVien.Nhap();
+            sinhVien.Xuat();
             Console.ReadLine();
         }
     }
