@@ -5,7 +5,7 @@
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <StartupObject>THUCHANH02.Bai1_1</StartupObject>
+    <StartupObject>THUCHANH02.Bai3_6</StartupObject>
   </PropertyGroup>
 
 </Project>

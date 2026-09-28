@@ -44,14 +44,29 @@ namespace THUCHANH02
             if (luaChon == 1)
             {
                 Console.WriteLine("\n--- GIAI PHUONG TRINH: ax^2 + bx + c = 0 ---");
-                Console.Write("Nhap a (khac 0): "); double a = double.Parse(Console.ReadLine());
+                Console.Write("Nhap a: "); double a = double.Parse(Console.ReadLine());
                 Console.Write("Nhap b: "); double b = double.Parse(Console.ReadLine());
                 Console.Write("Nhap c: "); double c = double.Parse(Console.ReadLine());
 
-                double delta = b * b - 4 * a * c;
-                if (delta < 0) Console.WriteLine("=> Phuong trinh vo nghiem!");
-                else if (delta == 0) Console.WriteLine($"=> Nghiem kep: x = {-b / (2 * a)}");
-                else Console.WriteLine($"=> 2 Nghiem: x1 = {(-b + Math.Sqrt(delta)) / (2 * a):F2}, x2 = {(-b - Math.Sqrt(delta)) / (2 * a):F2}");
+                if (a == 0)
+                {
+                    if (b == 0)
+                    {
+                        if (c == 0) Console.WriteLine("=> Phuong trinh co vo so nghiem.");
+                        else Console.WriteLine("=> Phuong trinh vo nghiem!");
+                    }
+                    else
+                    {
+                        Console.WriteLine($"=> Phuong trinh co 1 nghiem (bac 1): x = {-c / b}");
+                    }
+                }
+                else
+                {
+                    double delta = b * b - 4 * a * c;
+                    if (delta < 0) Console.WriteLine("=> Phuong trinh vo nghiem!");
+                    else if (delta == 0) Console.WriteLine($"=> Nghiem kep: x = {-b / (2 * a)}");
+                    else Console.WriteLine($"=> 2 Nghiem: x1 = {(-b + Math.Sqrt(delta)) / (2 * a):F2}, x2 = {(-b - Math.Sqrt(delta)) / (2 * a):F2}");
+                }
             }
             else if (luaChon == 0) Console.WriteLine("Tam biet!");
             else Console.WriteLine("Chuc nang khong ton tai!");
