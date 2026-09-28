@@ -68,8 +68,7 @@ namespace THUCHANH02
                 Console.WriteLine("-----------------------------------------------------");
             }
 
-            Console.WriteLine($"TỔNG LƯƠNG CẦN TRẢ CHO PHÒNG BAN: {tongTienPhongBan:N0} VND");
-            Console.WriteLine("=====================================================");
+            Console.WriteLine($"Tong luong ca phong ban: {tongTienPhongBan:N0} VND");
         }
 
         public static void Main(string[] args)
